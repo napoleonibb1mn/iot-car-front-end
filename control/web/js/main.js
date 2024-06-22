@@ -10,7 +10,7 @@ let mensaje = document.getElementById('mensaje');
 function callApi(estatus){
 
     // Hacer una petición para un usuario con ID especifico
-axios.get('https://3.17.4.88/iot-car-control/back-end/apis/setRegistro.php?valorEstatus='+estatus)
+axios.get('https://18.224.13.4/iot-car-control/back-end/apis/setRegistro.php?valorEstatus='+estatus)
 .then(function (response) {
   // manejar respuesta exitosa
   console.log(response);
@@ -26,16 +26,16 @@ axios.get('https://3.17.4.88/iot-car-control/back-end/apis/setRegistro.php?valor
 }
 
 avanzar.addEventListener('click', function ()  {
-    callApi('w');
+    callApi('f');
 });
 izquierda.addEventListener('click', function ()  {
-    callApi('a');
+    callApi('l');
 });
 detener.addEventListener('click', function ()  {
-    callApi('p');
+    callApi('b');
 });
 derecha.addEventListener('click', function ()  {
-    callApi('d');
+    callApi('r');
 });
 reversa.addEventListener('click', function ()  {
     callApi('s');
